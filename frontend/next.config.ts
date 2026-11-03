@@ -1,16 +1,19 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  cacheComponents: true,
-  partialPrefetching: true,
+  serverExternalPackages: ['pdf-parse'],
   async rewrites() {
-    const backendUrl = process.env.BACKEND_URL || process.env.BACKEND_INTERNAL_URL || 'http://localhost:3000';
-    return [
-      {
-        source: '/api/:path*',
-        destination: `${backendUrl}/api/:path*`,
-      },
-    ];
+    const backendUrl = process.env.BACKEND_URL || process.env.BACKEND_INTERNAL_URL;
+    // Only rewrite if an explicit external backend URL is specified
+    if (backendUrl && !backendUrl.includes('localhost') && !backendUrl.includes('127.0.0.1')) {
+      return [
+        {
+          source: '/api/:path*',
+          destination: `${backendUrl}/api/:path*`,
+        },
+      ];
+    }
+    return [];
   },
   turbopack: {
     rules: {
