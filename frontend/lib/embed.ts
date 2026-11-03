@@ -1,23 +1,27 @@
 import 'server-only';
 import { GoogleGenAI } from '@google/genai';
 
-const apiKey = process.env.GEMINI_API_KEY;
-const model = process.env.GEMINI_EMBED_MODEL ?? 'gemini-embedding-001';
-
-let client: GoogleGenAI | null = null;
-if (apiKey && !apiKey.includes('REPLACE_WITH')) {
+function getEmbedClient(): { client: GoogleGenAI; model: string } | null {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey || apiKey.includes('REPLACE_WITH') || apiKey.includes('your_gemini')) {
+    return null;
+  }
+  const model = process.env.GEMINI_EMBED_MODEL || 'text-embedding-004';
   try {
-    client = new GoogleGenAI({ apiKey });
+    return { client: new GoogleGenAI({ apiKey }), model };
   } catch (err) {
     console.error('[embed] Failed initializing GoogleGenAI:', err);
+    return null;
   }
 }
 
 export async function embedText(text: string, taskType: 'QUERY' | 'DOCUMENT' = 'QUERY'): Promise<number[]> {
-  if (!client || !apiKey) {
-    console.warn('[embed] GEMINI_API_KEY not set — returning zero vector');
+  const embedder = getEmbedClient();
+  if (!embedder) {
     return new Array(768).fill(0);
   }
+
+  const { client, model } = embedder;
 
   try {
     const result = await client.models.embedContent({

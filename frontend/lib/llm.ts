@@ -1,15 +1,17 @@
 import 'server-only';
 import { GoogleGenAI } from '@google/genai';
 
-const apiKey = process.env.GEMINI_API_KEY;
-const llmModel = process.env.GEMINI_MODEL ?? 'gemini-2.0-flash-lite';
-
-let client: GoogleGenAI | null = null;
-if (apiKey && !apiKey.includes('REPLACE_WITH')) {
+function getGeminiClient(): { client: GoogleGenAI; model: string } | null {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey || apiKey.includes('REPLACE_WITH') || apiKey.includes('your_gemini')) {
+    return null;
+  }
+  const model = process.env.GEMINI_MODEL || 'gemini-2.0-flash-lite';
   try {
-    client = new GoogleGenAI({ apiKey });
+    return { client: new GoogleGenAI({ apiKey }), model };
   } catch (e) {
     console.error('[llm] Error initializing GoogleGenAI:', e);
+    return null;
   }
 }
 
@@ -21,10 +23,14 @@ export async function* streamLLMTokens(
   history: { role: string; content: string }[],
   signal?: AbortSignal,
 ): AsyncGenerator<string> {
-  if (!client || !apiKey) {
-    yield "I'm running in demo preview mode. You can ask me anything about your project or schedule.";
+  const gemini = getGeminiClient();
+
+  if (!gemini) {
+    yield "I'm running in demo preview mode because GEMINI_API_KEY is not configured in your environment settings. Please set your API keys on Vercel to enable live AI responses.";
     return;
   }
+
+  const { client, model: llmModel } = gemini;
 
   const langCode = (personaPrivConfig.sttLanguage as string) || 'en-IN';
   let languageDirective = 'CRITICAL: Your name is Sapphire. The user is speaking in English. You MUST reply in clear, natural spoken English as Sapphire.';
