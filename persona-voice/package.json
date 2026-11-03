@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "vitest run",
+    "test": "npx vitest run",
     "seed": "tsx scripts/seed-personas.ts",
     "ingest": "tsx scripts/ingest.ts",
     "gen-audio": "tsx scripts/gen-static-audio.ts"
@@ -39,10 +39,5 @@
     "tailwindcss": "^4",
     "tsx": "^4.23.15",
     "typescript": "^5"
-  },
-  "optionalDependencies": {
-    "@vitest/ui": "^5.0.5",
-    "vite": "^8.3.5",
-    "vitest": "^5.0.5"
   }
 }
