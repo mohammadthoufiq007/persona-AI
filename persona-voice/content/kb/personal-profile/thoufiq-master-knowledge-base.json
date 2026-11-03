@@ -1,0 +1,556 @@
+{
+  "metadata": {
+    "schema_version": "2.0.0",
+    "snapshot_date": "2026-10-30",
+    "timezone": "Asia/Kolkata (UTC+05:30)",
+    "sources": [
+      "Claude record of what Thoufiq stated in past chats",
+      "Gemini-generated JSON profile (mohammed_thoufiq_knowledge_base.json)"
+    ],
+    "tag_legend": {
+      "CONFLICT": "Sources disagree. Use the 'preferred' value but ask Thoufiq to confirm if it matters.",
+      "UNVERIFIED": "Came only from the Gemini JSON; not confirmed in conversation."
+    },
+    "agent_rules": [
+      "Read identity, interaction_guide and current_priorities first on every task.",
+      "Never invent facts. Anything under unknowns_to_confirm must be asked, not guessed.",
+      "Prefer the newer and more specific source on conflicts and record the discrepancy."
+    ]
+  },
+
+  "identity": {
+    "preferred_name": "Thoufiq",
+    "also_known_as": ["Mohammed Thoufiq"],
+    "passport_name": "Mohammed Thoufiq Jahir Hussain",
+    "passport_name_note": "Entered in the Given Name field with no surname, per South Indian convention.",
+    "certificate_names": ["Mohammed Thoufiq J", "Mohammad Thoufiq J"],
+    "name_mismatch_note": "The Linguaskill certificate reads 'Mohammad Thoufiq J' while the passport reads 'Mohammed Thoufiq Jahir Hussain'; a name correction or explanation is needed for applications.",
+    "date_of_birth": {"value": "2006-03-07", "tag": "UNVERIFIED"},
+    "location": {
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "country": "India",
+      "local_ties": ["Mannurpet", "Ambattur Estate (family business base)"]
+    },
+    "languages": [
+      {"language": "English", "proficiency": "Fluent / professional"},
+      {"language": "Tamil", "proficiency": "Native"}
+    ],
+    "orientation": "Builder/architect; prefers shipping real systems over pure research.",
+    "pen_name": "Arcane",
+    "career_goal": "AI/SWE engineer at a top, high-paying tech company; long-term, found a product-driven startup (developer tools, workflow automation, agent infrastructure).",
+    "near_term_goal": "MSc in AI/CS in Europe or the Gulf, September 2027 intake."
+  },
+
+  "interaction_guide": {
+    "communication_style": [
+      "Direct, technical, precise, no fluff. Own voice card: 'direct, technical, precise, no fluff, built-not-borrowed'.",
+      "Concise and intellectually curious; wants concrete technical detail and architectural depth.",
+      "Short informal messages; may skip questions, answer partially or reverse direction mid-thread. Re-confirm gently.",
+      "Often starts broad or vague, then narrows through pushback; pushback is welcome.",
+      "Does conceptual groundwork himself, then asks for help with structure, formatting and execution."
+    ],
+    "values": [
+      "Accuracy: double-check every date and number; he corrects errors precisely.",
+      "Honesty about results: label design targets as targets; never fabricate metrics or comparisons.",
+      "Submission-ready, visually verified deliverables; no placeholder guesses or bracketed assumptions in finals.",
+      "No silent assumptions; state assumptions explicitly.",
+      "Markdown-heavy structured output; roadmaps with explicit timelines and deadlines.",
+      "Full context continuity across sessions.",
+      "Candid external perspective, including recruiter-style critique with reasoning.",
+      "Draft-first collaboration; mentorship-style guidance resonates.",
+      "Respect the scope he sets for a session.",
+      "Code standards: type-safe (TypeScript / Python typing), modular, idiomatic, token-conscious.",
+      "Detailed .md specs or master prompts he can hand to coding agents (Antigravity, Cursor, Claude Code)."
+    ],
+    "avoid": [
+      "Buzzword-dense, broad, unfalsifiable claims.",
+      "Deliverable packages whose documents imply different underlying claims.",
+      "Over-scoping across too many projects.",
+      "Pasting style examples into prompts without care (in his Prompt Ladder work an example caused irrelevant structure to be copied; direct constraints worked better)."
+    ],
+    "agent_role": "Adaptive, technically rigorous thought partner and co-builder."
+  },
+
+  "education": {
+    "institution": "B.S. Abdur Rahman Crescent Institute of Science and Technology (BSACIST)",
+    "location": "Chennai, Tamil Nadu, India",
+    "degree": "B.Tech Artificial Intelligence and Data Science",
+    "start_year": 2023,
+    "expected_graduation": "May/June 2027",
+    "current_standing": "Final year, 7th semester (Oct 2026)",
+    "cgpa": {
+      "preferred": 7.94,
+      "context": "After 6 semesters; earlier noted ~7.95 and expected to cross 8.0",
+      "tag": "CONFLICT",
+      "alternative": {"value": 9.9, "source": "Gemini JSON", "note": "Almost certainly wrong; do not use on applications without confirmation."}
+    },
+    "english_proficiency": {
+      "test": "Cambridge Linguaskill",
+      "preferred": {
+        "overall": 181,
+        "listening": 177,
+        "reading": 202,
+        "speaking": 169,
+        "writing": 176,
+        "dates": "Listening/Reading/Writing 2026-07-08; Speaking 2026-07-10"
+      },
+      "tag": "CONFLICT",
+      "alternative": {"overall": 185, "level": "C1", "date": "2026-09", "source": "Gemini JSON", "note": "Possibly a retake or an error; ask which certificate is latest."},
+      "ielts_status": "Earlier plans listed IELTS for Sept/Oct 2026; current status unconfirmed."
+    },
+    "core_interests": ["Machine Learning", "Deep Learning", "NLP/LLMs", "Data Engineering and Analytics", "Agentic AI systems"],
+    "prior_internship": {
+      "company": "Codtech",
+      "note": "Online, certificate-style; Thoufiq judges it low-weight for EU universities and reputable employers."
+    },
+    "courses": [
+      {
+        "name": "AI Fluency: Framework & Foundations",
+        "focus": ["Software development", "Git/GitHub", "Architecture", "Collaborating with AI"],
+        "completed": "FL-01 AI Workflow Audit and Tool Setup: 13-task audit across four buckets (do independently, full automation, delegate to AI with review, collaborate with AI). Built a Claude Project with custom instructions for status reports, unit tests, documentation summarisation and debugging."
+      }
+    ],
+    "events": [
+      {"date": "2025-02-28", "event": "Spectron '2K25 Technical Symposium", "role": "Participant in paper presentation and technical events", "tag": "UNVERIFIED"},
+      {"date": "2026-07", "event": "Published book chapter", "role": "Co-author with undergraduate classmates", "tag": "UNVERIFIED", "note": "Ask for title and publisher before citing."}
+    ]
+  },
+
+  "current_roles": {
+    "flyrank_ai": {
+      "also_called": "10x.ai",
+      "role": "Backend AI Engineer intern",
+      "start": "2026-09 (from Gemini JSON; confirm exact date)",
+      "track": "Structured 'AI Fluency' internship with weekly assignments",
+      "work": [
+        "Automated reporting pipelines (PDF generation with ReportLab)",
+        "Usage metering services and backend infrastructure for AI systems",
+        "Scalable APIs and integration points",
+        "QA assessment for a Zudu AI application"
+      ],
+      "planned_capstone": "LLM Usage Metering & Billing Service (synergy with Orchest AI's OpenRouter architecture)",
+      "portfolio_positioning": "Production-ready AI backend systems that integrate ML into reliable software. Audience: AI engineering hiring managers; desired action: interview invite.",
+      "deliverables_done": [
+        "Case-study document 'Frame It as Cases' (three project write-ups plus voice card)",
+        "Prompt Ladder (five technique layers on the Folio flashcard endpoint)",
+        "FL-01 Prompt Iteration Log (recruiter-facing README for AuthFace; cross-model comparison table with ChatGPT column left for Thoufiq to fill)"
+      ],
+      "open_issue": "Sitemap pressure-test and workspace instructions were built against an earlier 'messy real-world data' claim, not the final 'production-ready AI backend systems' claim. Align before final submission.",
+      "portfolio_site": "4 pages confirmed (Home, Projects/Case Studies, About, Contact); a 6-page variant was explored."
+    },
+    "oclapse": {
+      "type": "Web and AI automation agency / organisation",
+      "domain": "oclapse.me",
+      "plans": [
+        "Single portfolio site with a toggle between personal and agency portfolios",
+        "persona.oclapse.me for the voice assistant"
+      ]
+    },
+    "veysh": {
+      "role": "Freelance app developer for fashion brand Veysh; agreement reached",
+      "nda": "Client requested an NDA; Thoufiq is preparing a tailored unilateral NDA with Veysh as 1st Party. Signs as Mohammed Thoufiq (Oclapse)."
+    },
+    "campus": [
+      "BSACIST Data Science Club and campus executive roles",
+      "Photography club",
+      "Literature society (200+ poems authored)",
+      "Runs the college startup club hardware project (HapSync)",
+      "Aware of CIIC (Crescent Innovation and Incubation Council); plans to explore it for startup support"
+    ],
+    "programs": [
+      {"name": "Claude Ambassador program", "status": "Application drafted around Data Science Club, executive roles and creative writing; outcome unconfirmed"},
+      {"name": "Gen AI Academy APAC Edition (Hack2skill)", "status": "Participating; targeting the Elite Club pathway"}
+    ]
+  },
+
+  "technical_expertise": {
+    "languages": ["Python (primary)", "TypeScript", "JavaScript", "SQL (advanced)", "Java (Android)", "C++ (ESP32 firmware)", "Go (UNVERIFIED)"],
+    "backend": ["FastAPI", "Node.js/Express", "REST APIs", "JWT auth", "Celery", "Redis", "Inngest", "Prisma ORM", "Drizzle ORM", "PostgreSQL", "SQLite", "Supabase"],
+    "frontend": ["Next.js", "React 19", "TypeScript", "Tailwind CSS", "React Flow", "Zustand", "Framer Motion", "GSAP", "Three.js", "Vite"],
+    "ai_ml": ["Model Context Protocol (MCP)", "LLM integration and tool calling", "OpenRouter", "Vercel AI SDK", "OpenAI/Anthropic APIs", "LangChain", "RAG", "TensorFlow Lite", "scikit-learn", "XGBoost", "LightGBM", "Lifelines", "Local Whisper", "Zod structured outputs", "Agentic architecture patterns", "Prompt engineering and token reduction"],
+    "devops_and_tools": ["Docker", "Git/GitHub", "Google Antigravity IDE", "Cursor", "Claude Code", "Vercel", "Streamlit Community Cloud", "AWS (optional sync)", "Prometheus/Grafana (planned)", "LaTeX (resume)", "Python docx", "ReportLab", "Notion"],
+    "embedded": ["ESP32", "C++ firmware", "Debounced arcade buttons", "LCD/OLED displays", "Custom enclosures", "Hardware-to-cloud (Google Apps Script, Looker Studio, Firebase/Sheets)"],
+    "hardware": {
+      "workstation": "Asus TUF Gaming A15",
+      "gpu": "Nvidia RTX 3050 (4 GB VRAM)",
+      "limits": "Local model work limited to QLoRA on sub-7B models",
+      "intended_use": "Local model testing, backend development, containers"
+    },
+    "notion_projects_tracker": {
+      "database_id": "894e24d3-414b-4951-b56a-5562df1e63f4",
+      "stages": ["Thinking", "Building", "Testing", "Deployed"]
+    },
+    "under_consideration": ["Rust (Qwik transfer engine)", "Tauri", "libp2p + QUIC", "OAuth 2.1 + W3C Verifiable Credentials", "Railway/Render/Fly.io", "Neon"],
+    "benefits_and_resources": ["GitHub Student Pack (Copilot Pro, DigitalOcean $200 credit, JetBrains, Sentry)", "Google AI Pro", "Anthropic Academy", "Coursera"],
+    "known_gaps": "Resume rated 7/10 in review: lacks quantified metrics and system-design/testing signals. Deliberately building hand-coding fluency via LeetCode to complement AI-assisted development."
+  },
+
+  "projects": [
+    {
+      "name": "Orchest AI",
+      "status": "In active development (primary portfolio capstone)",
+      "summary": "MCP-native, multi-model visual workflow orchestrator.",
+      "tech_stack": ["Next.js", "React Flow", "Zustand", "Inngest", "OpenRouter", "Supabase", "Drizzle ORM", "Vercel AI SDK", "Framer Motion"],
+      "features": ["AI Auto-Build chat bar (generateObject + Zod)", "Framer Motion landing page", "Antigravity-based build workflow"],
+      "decisions": [
+        "Fix dual Zustand/React Flow state bug before adding features",
+        "Move API keys server-side",
+        "Replace simulated MCP Data Node with a real MCP client",
+        "Use OpenRouter as the single model-routing layer"
+      ],
+      "known_issues": ["Mock auth", "Hardcoded env keys", "Hardcoded MCP DataNode", "new Function() in Transform node (security risk)"],
+      "next": "Bottom-centre prompt bar that builds a workflow from a prompt and auto-executes it on a free LLM API; wants a master .md prompt covering the report roadmap plus this feature.",
+      "origin": "Evolved from a FlyRank internship assignment"
+    },
+    {
+      "name": "AgentMesh",
+      "status": "Planned / in progress; marked 'Planned' on resume",
+      "summary": "Multi-agent orchestration backend with MCP and specialised agents for retrieval, code generation, planning and evaluation.",
+      "tech_stack": ["FastAPI", "Celery", "Redis", "PostgreSQL", "Docker", "Anthropic/OpenAI APIs", "Prometheus/Grafana"],
+      "note": "Metrics are design targets, not measured results. Strongest potential resume credential; priority is a deployable v1."
+    },
+    {
+      "name": "AuthFace",
+      "status": "Completed and submitted (Sept 2026) to NHAI Hackathon 7.0",
+      "summary": "Offline facial recognition with liveness detection.",
+      "tech_stack": ["TensorFlow Lite", "AES-256 encrypted SQLite", "Optional AWS sync"],
+      "results": {"TAR": "97%", "spoof_rejection": "98.5%"},
+      "note": "His strongest portfolio credential; lead with it in outreach."
+    },
+    {
+      "name": "OncoAI (formerly Cancer Intelligence Platform, CIP)",
+      "status": "Built and deployed; repo cleaned",
+      "summary": "Precision oncology dashboard with 11 clinical simulation modules.",
+      "tech_stack": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "GSAP"],
+      "live_url": "onco-ai-platform.vercel.app",
+      "predecessor": "CIP: Python, Streamlit, scikit-learn, XGBoost, LightGBM, Lifelines; dark maritime-blue design; moved to Streamlit Community Cloud after Vercel incompatibilities."
+    },
+    {
+      "name": "Folio",
+      "status": "Completed (May 2026)",
+      "summary": "Personal study toolkit with AI chat, SM-2 spaced-repetition flashcards, PDF viewer and interactive knowledge graph. Mascot and editorial aesthetic designed by Thoufiq.",
+      "tag": "CONFLICT",
+      "stack_variants": [
+        "Vanilla JS, Node.js, Express, Prisma, SQLite, JWT (chats)",
+        "Java, Android Studio, SQLite, Apache POI, iText (earlier chats)",
+        "React, TypeScript (Gemini JSON)"
+      ],
+      "note": "Ask which build is meant. Considered underrated because it is actually finished."
+    },
+    {
+      "name": "Zypher ecosystem",
+      "status": "Umbrella; sequencing under evaluation",
+      "components": {
+        "Zypher": "Flagship AI chatbot and umbrella brand",
+        "Scribe": "Agentic identity and authorization platform; highest-leverage bet, startup vehicle and subject of the research paper",
+        "Wisp": "Customisable personal AI voice agent with RAG/knowledge base; planned as an AgentMesh client",
+        "Qwik": "AI-assisted high-speed secure file transfer (deferred)",
+        "Medical sequencing platform": "Fine-tuned for medical data; early stage (deferred)"
+      },
+      "suggested_sequence": ["AgentMesh v1", "Polish Folio", "Scribe narrow MVP tied to the paper", "Wisp as AgentMesh client", "Defer Qwik and medical platform"],
+      "principle": "Depth over breadth."
+    },
+    {
+      "name": "Relay (Zypher AI desktop app; to be renamed)",
+      "status": "In development, early stage",
+      "summary": "Open-source, local-first, provider-agnostic desktop AI coworker for private context; alternative to Claude Cowork / OpenWork-style tools.",
+      "plans": ["Rename away from 'Relay'", "Build the website with the full interface first", "Indigo/electric-blue light-theme branding"],
+      "risk": "Scope risk flagged: ship one sharp thing first."
+    },
+    {
+      "name": "HapSync (Happiness Index terminal)",
+      "status": "Working prototype with planned upgrades",
+      "tag": "CONFLICT",
+      "status_alternative": "Gemini JSON says 'Completed (Sept 2026)'; Claude chats (early Oct 2026) describe a Wokwi draft with local display flow only, no Wi-Fi/backend yet.",
+      "summary": "Physical mood ballot box for the college startup club.",
+      "hardware": ["ESP32", "LCD (LCD1602 in Wokwi draft)", "4 illuminated debounced arcade buttons: Stressed, Surviving, Great, Thriving"],
+      "screen_flow": "Idle ('HapSync' small + 'How are you feeling today?') -> mood shown -> Stressed/Surviving: 'Scan the QR to let us know why ->'; Great/Thriving: 'Any suggestions to further improve us ->' -> 'Thank you for your feedback' -> idle.",
+      "qr": "Static printed QR sticker linking to a site with a motivating message, a contact number and a letterbox/complaint feature to the student dean.",
+      "data": "Mood volume/distribution only; Google Apps Script + Looker Studio (Gemini JSON); earlier plan Sheets/Firebase/Excel.",
+      "planned_upgrade": "Bigger display plus speaker module that says the mood word; he requested spec sheet, pin map and prices."
+    },
+    {
+      "name": "Token-efficient web scraping / search-to-markdown engine and course chatbot ('zypher chatbot')",
+      "status": "MVP built; in active development",
+      "summary": "Converts web content to lean Markdown to cut LLM token use. Course project that must not be 'just another GPT wrapper'.",
+      "tech_stack": ["FastAPI", "Next.js", "SQLite", "ddgs search", "trafilatura", "BM25 ranking", "tiktoken savings badge", "SSE streaming", "Go (UNVERIFIED)"],
+      "wants": "Both web and PDF parsing. Rejected the archived mayooear/ai-pdf-chatbot-langchain repo as a base.",
+      "llm_options": ["OpenRouter", "Omni Router", "Mistral", "Ollama"]
+    },
+    {
+      "name": "Gnani AI voice assistant",
+      "status": "Contest entry in progress; closes 2026-11-10",
+      "summary": "Voice-activated, personalisable chatbot with a per-persona knowledge base ('one engine, many personas').",
+      "tech_stack": ["React", "Tailwind CSS", "Next.js", "Supabase", "Framer Motion", "Gnani TTS+STT API"],
+      "hosting": "persona.oclapse.me",
+      "wants": "Secure implementation plan and detailed markdown architecture doc."
+    },
+    {
+      "name": "Flowise fork idea",
+      "status": "Idea",
+      "summary": "Turn FlowiseAI/Flowise into his own app improved with Orchest AI's strengths; deciding fork vs clone."
+    },
+    {
+      "name": "Autonomous coding agent via Telegram",
+      "status": "Planned",
+      "summary": "System that codes, validates and debugs autonomously, controlled through a Telegram bot (Grok-bot style)."
+    },
+    {
+      "name": "Voice-activated desktop automation agent",
+      "status": "Spec drafted",
+      "summary": "Background daemon for Mac/Windows/Linux with global hotkey, voice command and local Whisper; five layers (voice capture, router, multi-agent, tool layer, feedback); domain-scoped agents (Calendar, Reminders/Tasks, Notes, System, optional Comms).",
+      "open": ["AGENTS.md section 6 awaits his Whisper-Flow repo", "Backend stack", "LLM routing", "Antigravity workflow file .agent/workflows/build-voice-agent.md"]
+    },
+    {
+      "name": "Shared agent memory filesystem (SaaS + IEEE paper)",
+      "status": "Planned",
+      "summary": "Cloud filesystem mounted locally; Cloudflare Durable Objects for change tracking, R2 for bytes; target $0 cost; sellable SaaS; possible final-year project; asked about patenting.",
+      "paper": "Decided to write an IEEE paper, aiming for under 5% plagiarism."
+    },
+    {
+      "name": "Retail sales analytics software",
+      "status": "Idea",
+      "summary": "For shop/store owners: monthly billing and purchase logs compared over time to find well-selling vs slow items; model to classify and predict."
+    },
+    {
+      "name": "Local Share / Foreign Share",
+      "status": "Concept with full PRD",
+      "summary": "Wi-Fi Direct/BLE local transfer plus WebRTC P2P remote transfer; OS right-click menu as primary entry. Related to Qwik."
+    },
+    {
+      "name": "letterstovoid",
+      "status": "Personal project in progress",
+      "summary": "Site for Thoufiq and his girlfriend.",
+      "tech_stack": ["Next.js", "Three.js", "Framer Motion", "Supabase"],
+      "palette": "#F5F5E2",
+      "done": ["3D hub", "/explore carousel", "/bouquet creator", "/garden", "/journal", "/letters"],
+      "next": "/music: show a Spotify playlist they made together, list tracks, play inline (fallback open in Spotify)."
+    }
+  ],
+
+  "competitions_and_applications": [
+    {"name": "NHAI Hackathon 7.0", "status": "AuthFace submitted"},
+    {
+      "name": "Gnani AI Great Indian AI Internship Challenge",
+      "deadline": "2026-11-10",
+      "internships_start": "2027-01-01",
+      "enrolled_with": "Student email",
+      "assets": "Combined TTS + STT API key from Gnani"
+    },
+    {"name": "Claude Ambassador program", "status": "Unconfirmed"},
+    {"name": "Gen AI Academy APAC (Hack2skill)", "status": "Targeting Elite Club"}
+  ],
+
+  "research": {
+    "scribe_paper": {
+      "topic": "Agent-to-agent authorization and delegation; a universal 'agentic address' platform (portable identity plus authorization for agents, like TLS/PKI for browsers but native to agent-to-agent, stranger-to-stranger, cross-organisation interactions).",
+      "gap_analysis_against": ["Safe Bilevel Delegation (SBD)", "Invocation-Bound Capability Tokens (IBCTs)", "Tallam 'Authorization Propagation'", "OIDC-A", "AITH", "IETF AIP track"],
+      "confirmed_gap": "No single framework covers multi-hop, cross-organisational agent authorization.",
+      "architecture": ["Identity address", "Capability envelope", "Cross-boundary trust resolution"],
+      "open_decisions": ["Root of trust (PKI vs web-of-trust; hybrid most defensible)", "Target venue", "Possible NLP/ML co-author"],
+      "key_concepts": ["Macaroons", "Biscuit tokens", "Confused deputy", "Capability attenuation", "Delegation chains", "Temporal validity", "Execution-count revocation"],
+      "principle": "Contribution-first: clearly scoped and falsifiable."
+    },
+    "ieee_paper": "On the shared agent memory filesystem.",
+    "stated_interests": ["Agentic AI architectures", "Token-optimisation methods"],
+    "book_chapter": {"year_month": "2026-07", "tag": "UNVERIFIED"}
+  },
+
+  "graduate_school_plan": {
+    "goal": "MSc in AI / Computer Science, September 2027 intake, scholarship-dependent",
+    "status": "No applications submitted yet; waiting on passport (about a week as of Oct 2026).",
+    "ireland": {
+      "primary": "UCD MSc Advanced Artificial Intelligence",
+      "backup": "DCU MSc Computing",
+      "also": ["UCC", "MTU", "University of Limerick (budget option)", "TCD (earlier list)"]
+    },
+    "gulf": [
+      {"name": "MBZUAI", "note": "Priority deadline mid-Nov 2026; ranked first overall on timeline"},
+      {"name": "KAUST", "note": "Fully funded; VSRP internship is the key lever"}
+    ],
+    "germany_secondary": {
+      "universities": ["TUM", "RWTH Aachen", "TU Berlin", "Uni Stuttgart", "TU Darmstadt", "Uni Freiburg", "THD", "HNU"],
+      "flags": ["APS certificate", "dMAT test", "Blocked account EUR 11,208"]
+    },
+    "scholarships": ["GOI-IES (highest impact, portable)", "VV Giri Global Excellence (UCD, Indian nationals)", "DCU Faculty scholarship (automatic reduction)", "DAAD (Nov 2026)"],
+    "phases": [
+      {"phase": 1, "window": "May-Aug 2026", "focus": "Foundation: projects, resume, internships"},
+      {"phase": 2, "window": "Aug-Dec 2026", "focus": "Build during 4th-year semester 1"},
+      {"phase": 3, "window": "Oct 2026-Feb 2027", "focus": "University and scholarship applications"},
+      {"phase": 4, "window": "Jan-May 2027", "focus": "Final semester and offer decisions"},
+      {"phase": 5, "window": "May-Sep 2027", "focus": "Visa, blocked account, departure"}
+    ],
+    "key_dates": {
+      "2026-11-10": "Gnani contest closes",
+      "2026-11-mid": "MBZUAI priority deadline",
+      "2026-11": "DAAD and GOI scholarships",
+      "2027-01-15": "Uni-Assist (Germany)",
+      "2027-02-01": "TCD application",
+      "2027-05_06": "Germany blocked account and visa"
+    },
+    "application_portfolio_targets": ["End-to-end ML pipeline on Hugging Face", "LLM/RAG app (LangChain)", "Data engineering pipeline (Airflow/Prefect)"]
+  },
+
+  "career_plan": {
+    "short_term": [
+      "Publish research on agentic AI architectures and token optimisation",
+      "Finish the degree with distinction (2027)",
+      "Land an SDE or AI Engineer role at a top-tier tech enterprise",
+      "Strengthen resume (LaTeX, backend-AI focus, quantified FlyRank bullets, testing/system-design signals), GitHub portfolio and LinkedIn"
+    ],
+    "internship_targets_identified": ["Zoho", "AEVEVO Technology", "Archimedis Digital", "PGAGI", "Internshala remote AI/ML roles"],
+    "resume_stack_line": ["FastAPI", "Celery", "Redis", "PostgreSQL", "Docker", "Supabase", "OpenAI/Anthropic APIs", "JWT", "REST"],
+    "learning_roadmap": {
+      "length": "6 months, 7 phases",
+      "phases": ["Math", "ML", "DL", "NLP", "GenAI/agentic", "MLOps", "SWE"],
+      "resources": ["Anthropic Academy", "Coursera", "Google AI Pro", "GitHub Student Pack"],
+      "certifications": ["Anthropic Academy", "Cloud certs"]
+    },
+    "leetcode": {
+      "order": ["LeetCode 75", "SQL 50 in parallel", "Top Interview 150"],
+      "language": "Python",
+      "companion": "NeetCode",
+      "focus": ["Data structures and algorithms", "Advanced SQL"]
+    },
+    "long_term": "Found a product-driven startup. Scribe is the strongest candidate; open search for a real, unsolved, monetisable problem in software/AI/hardware-adjacent tech, separate from current projects."
+  },
+
+  "personal": {
+    "family": "Family business in ferrous and non-ferrous metal scrap trading, Ambattur Estate, Chennai; context for his interest in business-owner software.",
+    "relationship": "Has a girlfriend; they share a Spotify playlist; he built letterstovoid for them.",
+    "poetry": {
+      "pen_name": "Arcane",
+      "volume": "250+ poems (200+ cited elsewhere)",
+      "book_in_progress": "Everfallen",
+      "mediums": ["Poetry", "Lyrical prose", "Short narrative adaptations", "Milestone and anniversary poems"],
+      "interests": ["Wordplay", "Rhyme schemes", "Emotional narrative crafting"],
+      "community": "Literature society member"
+    },
+    "gaming": {
+      "main": "Active competitive Pokemon Champions player",
+      "dream_team": {"value": ["Greninja", "Lucario", "Darkrai", "Charizard X", "Garchomp", "Aegislash"], "tag": "UNVERIFIED"}
+    },
+    "photography": {
+      "club": "BSACIST photography club",
+      "style": {"value": "Vintage compact digital cameras, Y2K aesthetic, textural CCD output, street photography; studied Canon PowerShot A530 and Sony Cyber-shot series", "tag": "UNVERIFIED"}
+    },
+    "specialty_coffee": {
+      "value": "Precision brewing and custom recipe tracking (roast profile, water volume in g, temperature in C, immersion/drawdown time, tasting notes, extraction balance)",
+      "tag": "UNVERIFIED"
+    },
+    "audio_gear": {
+      "value": "Values reliable wireless audio, ergonomics, punchy tuning; benchmarked Sony WH-CH520 and Philips TAA4216",
+      "tag": "UNVERIFIED"
+    },
+    "design_taste": {
+      "gemini_profile": "Monochromatic, minimal, structured, high contrast; inspired by Nothing design philosophy, Swiss-style typography, clean grid systems.",
+      "observed_in_projects": "Warm palettes (#F5F5E2), editorial aesthetics, dark maritime-blue dashboards, indigo/electric-blue light themes, motion-rich and 3D UIs.",
+      "synthesis": "Spans minimal monochrome and warm expressive work depending on the project."
+    }
+  },
+
+  "likes_and_dislikes": {
+    "likes": [
+      "Modular, loosely coupled system architectures",
+      "Token-efficient prompting and lean payload designs",
+      "Minimalist, monochromatic interfaces with micro-interactions",
+      "Tactile embedded hardware (arcade switches, custom casings)",
+      "Precision in academic and personal documentation",
+      "Specialty coffee brewing control and experimentation",
+      "Expressive poetry and literary adaptations",
+      "Finishing and shipping real things; depth over breadth",
+      "Honest, direct feedback and structured roadmaps with dates",
+      "Agentic IDEs and AI-assisted building combined with hand-coding fluency"
+    ],
+    "dislikes": [
+      "Bloated UI frameworks with unneeded dependencies and visual noise",
+      "Inefficient API payloads that waste LLM context tokens",
+      "Ambiguous naming conventions and unstructured documentation",
+      "Superficial solutions lacking clean architectural separation",
+      "Fabricated metrics, inflated claims and buzzword-heavy positioning",
+      "Silent assumptions, inconsistent deliverables, placeholders in final output",
+      "Generic 'GPT wrapper' products with no real innovation"
+    ]
+  },
+
+  "principles": [
+    "One claim, one person, one action (proof statements).",
+    "Depth over breadth: finish one or two things well.",
+    "Label design targets as targets; never fabricate metrics.",
+    "Keep deliverables internally consistent.",
+    "Finished beats impressive-but-unfinished (Folio).",
+    "Contribution-first research: clearly scoped and falsifiable.",
+    "Fix architectural problems (state, secrets, fake MCP nodes) before adding features.",
+    "Local-first, low-latency, domain-scoped agents.",
+    "Ship the interface/website first when validating a product idea.",
+    "Applications need early planning; scholarship deadlines come first."
+  ],
+
+  "timeline": [
+    {"date": "2006-03", "event": "Born", "tag": "UNVERIFIED"},
+    {"date": "2023", "event": "Began B.Tech AI & DS at BSACIST"},
+    {"date": "2025-02", "event": "Spectron '2K25 symposium", "tag": "UNVERIFIED"},
+    {"date": "2026-05", "event": "Folio completed"},
+    {"date": "2026-05/06", "event": "Final-semester exams; career building paused until mid-June"},
+    {"date": "2026-07", "event": "Linguaskill (181 per chats); book chapter published (unverified)"},
+    {"date": "2026-09", "event": "FlyRank AI internship begins; AuthFace submitted to NHAI Hackathon 7.0; HapSync built (see status conflict); Linguaskill 185 per Gemini (conflict)"},
+    {"date": "2026-10", "event": "Passport application completed (awaiting arrival); Ireland shortlist set; Gnani contest, Veysh gig, course chatbot, shared-filesystem/IEEE idea underway"},
+    {"date": "2026-11-10", "event": "Gnani contest deadline"},
+    {"date": "2027-01-01", "event": "Gnani internships start"},
+    {"date": "2027-05/06", "event": "Graduation"},
+    {"date": "2027-09", "event": "Target Master's intake"}
+  ],
+
+  "current_priorities": {
+    "note": "Inferred from recent activity; confirm.",
+    "ranked": [
+      "Gnani AI contest (2026-11-10)",
+      "Passport arrival, then grad applications (MBZUAI mid-Nov; scholarships Nov)",
+      "Veysh NDA and freelance delivery",
+      "FlyRank deliverables; align the portfolio package",
+      "Course chatbot (markdown search innovation)",
+      "Orchest AI prompt bar and security fixes; AgentMesh v1",
+      "Scribe research paper and IEEE paper drafts",
+      "HapSync upgrades for the startup club",
+      "Dual-mode personal/agency portfolio site"
+    ]
+  },
+
+  "quick_reference": {
+    "passport_name": "Mohammed Thoufiq Jahir Hussain",
+    "city": "Chennai",
+    "college": "BSACIST, B.Tech AI & DS, final year",
+    "graduation": "~May/June 2027",
+    "cgpa": "7.94 [CONFLICT: Gemini says 9.9]",
+    "linguaskill": "181 (July) [CONFLICT: Gemini says 185 C1, Sept]",
+    "internship": "FlyRank AI (10x.ai), Backend AI Engineer",
+    "agency": "Oclapse / oclapse.me",
+    "pen_name": "Arcane (book: Everfallen)",
+    "hardware": "Asus TUF Gaming A15, RTX 3050 4 GB",
+    "live_deployment": "onco-ai-platform.vercel.app",
+    "hard_deadlines": ["Gnani 2026-11-10", "MBZUAI priority mid-Nov 2026"]
+  },
+
+  "unknowns_to_confirm": [
+    "Correct CGPA (7.94 vs 9.9) and latest Linguaskill score (181 vs 185)",
+    "IELTS status",
+    "Accuracy of Gemini-only items (DOB, Go, book chapter, Spectron, coffee, cameras, audio gear, Pokemon team, design inspirations)",
+    "Folio's actual stack/version; HapSync's current build state",
+    "Exact FlyRank start date, terms, manager",
+    "Book chapter title, publisher, co-authors",
+    "Passport arrival date and per-university application status",
+    "Final names for Relay and the Zypher product line",
+    "Scribe paper venue, co-author, root-of-trust choice",
+    "Claude Ambassador outcome",
+    "GitHub username, LinkedIn URL, contact details, social handles",
+    "Funding situation and budget for the Master's",
+    "Broader likes/dislikes outside tech (food, music, films, books, pet peeves) and wider life history"
+  ],
+
+  "maintenance_rules": [
+    "Update this file when Thoufiq gives new facts and date every change.",
+    "Mark corrections explicitly; never overwrite his own statements with inferences or Gemini-only claims.",
+    "When sources conflict, prefer the newer and more specific source, record the discrepancy and ask him if it matters."
+  ]
+}

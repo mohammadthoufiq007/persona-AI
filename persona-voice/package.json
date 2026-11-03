@@ -1,0 +1,46 @@
+{
+  "name": "persona-voice",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "node scripts/copy-vad-assets.mjs",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run",
+    "seed": "tsx scripts/seed-personas.ts",
+    "ingest": "tsx scripts/ingest.ts",
+    "gen-audio": "tsx scripts/gen-static-audio.ts"
+  },
+  "dependencies": {
+    "@google/genai": "^2.32.0",
+    "@langchain/textsplitters": "^1.0.2",
+    "@ricky0123/vad-web": "^0.0.31",
+    "@supabase/supabase-js": "^2.118.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^14.7.1",
+    "jose": "^6.2.14",
+    "lucide-react": "^1.64.0",
+    "next": "16.4.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "tailwind-merge": "^3.7.0",
+    "zod": "^4.6.7",
+    "zustand": "^5.0.16"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitest/ui": "^5.0.5",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.3",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}
